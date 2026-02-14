@@ -22,7 +22,8 @@ Este projeto demonstra um fluxo completo de análise de dados (End-to-End). Come
     * Design focado em UX com bordas arredondadas e limpeza de eixos.
 
 ## 🖼️ Visualização do Dashboard
-![Snapshot do Dashboard](1000082828.jpg)
+<img width="1431" height="804" alt="Visualização Gestão e Projetos de Inovação" src="https://github.com/user-attachments/assets/200e76cb-4ff2-4176-bec1-a24805eb3d78" />
+
 
 ## 📁 Estrutura do Repositório
 * `script_banco_dados.sql`: Contém todo o código de criação do banco e inserts.
@@ -30,4 +31,4 @@ Este projeto demonstra um fluxo completo de análise de dados (End-to-End). Come
 * `.gitignore`: Filtro para arquivos temporários.
 
 ---
-**Desenvolvido por José** *Estudante de Análise e Desenvolvimento de Sistemas (5º Semestre)*
+**Desenvolvido por José Ricardo *Estudante de Análise e Desenvolvimento de Sistemas (5º Semestre)*
