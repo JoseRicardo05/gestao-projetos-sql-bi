@@ -152,3 +152,21 @@ Where status_membro = 'ativo';
 
 select *
 from projeto;
+
+
+USE gestão_projetos_inovação
+
+
+CREATE OR REPLACE VIEW vw_dashboard_gerencial AS
+SELECT 
+    p.id_projeto,
+    p.nome_projeto AS Projeto,
+    p.status_projeto AS Situacao,
+    COALESCE(p.orçamento, 0) AS Investimento, 
+    DATEDIFF(p.data_termino, p.data_inicio) AS Prazo_Dias,
+    m.Nome AS Responsavel_TI
+FROM projeto p
+INNER JOIN membro_equipe m ON p.id_gerente = m.ID_Membro; 
+
+
+SELECT * FROM vw_dashboard_gerencial;
