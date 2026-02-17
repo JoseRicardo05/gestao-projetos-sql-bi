@@ -14,21 +14,27 @@ Este projeto demonstra um fluxo completo de análise de dados (End-to-End). Come
 * **Linguagem:** SQL.
 
 ## ⚙️ O que foi desenvolvido
-* **Modelagem SQL:** Criação de tabelas para Projetos, Equipe e Cargos com integridade referencial.
-* **Ingestão de Dados:** Conexão ODBC/Direct entre MySQL e Power BI.
-* **Tratamento de Dados:** Formatação de moedas (R$) e ajuste de tipos de dados.
-* **Visualização Dinâmica:** * Gráfico de colunas para acompanhamento de orçamentos.
-    * Gráfico de pizza para análise de distribuição de profissionais por cargo.
-    * Design focado em UX com bordas arredondadas e limpeza de eixos.
+Engenharia de Dados (SQL): Criação da View vw_dashboard_gerencial para centralizar a lógica de negócio, realizando INNER JOIN entre as tabelas de projetos e membros da equipe.
 
-## 🖼️ Visualização do Dashboard
-<img width="1431" height="804" alt="Visualização Gestão e Projetos de Inovação" src="https://github.com/user-attachments/assets/200e76cb-4ff2-4176-bec1-a24805eb3d78" />
+Tratamento de Dados: Implementação da função COALESCE no SQL para tratar valores nulos no orçamento, garantindo que o dashboard exiba "0" em vez de campos vazios.
+
+Inteligência de Tempo: Utilização da função DATEDIFF no banco de dados para calcular automaticamente o prazo de execução (Lead Time) de cada projeto em dias.
+
+*KPIs automáticos e integração direta com banco de dados MySQL.*
+![Dashboard de Performance](<img width="1277" height="714" alt="Dashboard de Gestão e Performance de Projetos" src="https://github.com/user-attachments/assets/464eda23-7964-4ee9-8eca-e40bcc018eec" />
+)
+
+#### 🎨 Versão 1.0: Prototipagem e UX
+*Foco inicial em design e distribuição de equipe.*
+![Dashboard de Inovação](<img width="1431" height="804" alt="Visualização Gestão e Projetos de Inovação" src="https://github.com/user-attachments/assets/98257f26-9de3-4d6f-85ef-fe518fe43375" />
+)
 
 
 ## 📁 Estrutura do Repositório
-* `script_banco_dados.sql`: Contém todo o código de criação do banco e inserts.
-* `Dashboard_Gestao_Projetos.pbix`: Arquivo do Power BI com os gráficos.
-* `.gitignore`: Filtro para arquivos temporários.
+script_banco_dados.sql: Script completo com a criação das tabelas, inserção de dados e a View gerencial.
 
+Dashboard de Gestão e Performance de Projetos.pbix: Arquivo final do Power BI conectado ao MySQL via View.
+
+Dashboard de Gestão de Projetos de Inovação.pbix: Arquivo original com foco em design e análise de cargos.
 ---
 **Desenvolvido por José Ricardo *Estudante de Análise e Desenvolvimento de Sistemas (5º Semestre)*
